@@ -1,0 +1,202 @@
+\documentclass[10pt,a4paper]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato} % Modern sans-serif font
+\usepackage[margin=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{paracol} % For two-column layout
+\usepackage{titlesec}
+
+%----------------------------------------------------------------------------------------
+%	FIX INDENTATION (THE SOLUTION IS HERE)
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt} % This removes the unwanted spaces
+
+%----------------------------------------------------------------------------------------
+%	COLORS & FORMATTING
+%----------------------------------------------------------------------------------------
+\definecolor{primary}{HTML}{2b2b2b} 
+\definecolor{accent}{HTML}{004f9f} 
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
+}
+
+\pagestyle{empty}
+
+% Section Headers
+\titleformat{\section}
+  {\large\bfseries\color{primary}\uppercase} 
+  {} 
+  {0em} 
+  {} 
+  [\titlerule] 
+
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+% Command for Work Experience
+\newcommand{\workexp}[4]{
+    \noindent \textbf{#1} \hfill \textbf{#2} \\ 
+    \textit{#3} 
+    \vspace{2pt}
+    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=1.5em]
+        #4
+    \end{itemize}
+    \vspace{6pt}
+}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADER
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\Huge \textbf{Abdelrahman Saed}} \\ \vspace{5pt}
+    {\Large \textbf{\color{accent}Lead Mobile Engineer}} \\ \vspace{5pt}
+    \small Cairo, Egypt / Remote $\cdot$ (+20) 1151034858 $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
+    \href{https://linkedin.com/in/your-profile}{LinkedIn} $\cdot$ \href{https://github.com/your-username}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/your-id}{StackOverflow}
+\end{center}
+
+\vspace{10pt}
+
+%----------------------------------------------------------------------------------------
+%	TWO-COLUMN LAYOUT
+%----------------------------------------------------------------------------------------
+\columnratio{0.32} 
+\setlength{\columnsep}{1.5em} 
+
+\begin{paracol}{2}
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN (SIDEBAR)
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\textbf{Languages} \\
+Dart, Java, Kotlin, JavaScript (Node.js), SQL
+
+\vspace{6pt}
+
+\textbf{Mobile Frameworks} \\
+Flutter (Expert), Android Native, iOS (Basic)
+
+\vspace{6pt}
+
+\textbf{Backend \& Web} \\
+Node.js, Firebase, GraphQL, Socket.io, REST APIs
+
+\vspace{6pt}
+
+\textbf{Tools \& DevOps} \\
+Git, Bitbucket, Jira, CI/CD, FVM, Trello
+
+\vspace{6pt}
+
+\textbf{Architecture} \\
+Clean Architecture, MVVM, Dependency Injection, SOLID Principles
+
+\vspace{12pt}
+
+\section{Education}
+\textbf{B.Sc. Management Information Systems} \\
+Ain Shams Academy \\
+\textit{Cairo, Egypt}
+
+\vspace{12pt}
+
+\section{Languages}
+\textbf{Arabic:} Native \\
+\textbf{English:} Professional
+
+\vspace{12pt}
+
+% --- NEW MERGED PROJECTS SECTION ---
+\section{Projects \& Open Source}
+
+\textbf{Cached\_pdfview Package} \\
+Created a Flutter plugin used by \textbf{5,000+ developers}. Focus on clean code \& CI/CD.
+
+\vspace{6pt}
+
+\textbf{Stickerawy (Android)} \\
+WhatsApp stickers app with \textbf{500k+ installs} on Google Play. Admob integrated.
+
+\vspace{6pt}
+
+\textbf{Ugigs Streams} \\
+Live streaming app using Agora.io, Stripe payments, and real-time Pusher chat.
+
+\vspace{6pt}
+
+\textbf{bnsaed.com} \\
+Personal portfolio built with Flutter Web.
+
+\switchcolumn
+
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN (MAIN CONTENT)
+%----------------------------------------------------------------------------------------
+
+\section{Summary}
+Passionate Lead Mobile Engineer with 3+ years of experience delivering high-performance mobile applications. Expert in \textbf{Flutter} and Android Native, with a strong background in backend integration using Node.js. Proven track record of leading development teams, optimizing app stability, and contributing to the open-source community. Adept at architectural design and reducing technical debt.
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Experience}
+
+% JOB 1
+\workexp{Sr. Software Developer}{Jan 2022 -- Present}
+{iStoria $\cdot$ Riyadh, Saudi Arabia (Remote)}
+{
+    \item Engineered complex features including native home widgets, background audio players, and rich notifications.
+    \item Boosted application stability, achieving a \textbf{99.4\% crash-free user rate} by debugging and resolving critical production issues.
+    \item Increased user engagement for marketing campaigns by implementing advanced user behavior tracking.
+    \item Forked and maintained 5+ packages to extend functionality and meet specific business requirements.
+    \item \textbf{Stack:} Flutter, Firebase, Jira, Bitbucket.
+}
+
+% JOB 2
+\workexp{Mid-Sr. Mobile Developer}{Oct 2020 -- Jan 2022}
+{Happy Trip $\cdot$ Cairo, Egypt}
+{
+    \item \textbf{Leadership:} Led a Flutter team of 2 developers, managing task distribution and conducting code reviews.
+    \item Designed a custom networking package handling caching (memory/persistence), queueing, and error handling, which \textbf{reduced networking code by 60\%}.
+    \item Developed the main "Happy Trip" app for flight and hotel bookings, along with internal management tools (HR, POS).
+    \item \textbf{Stack:} Flutter, Node.js, GraphQL, Firebase, Trello.
+}
+
+% JOB 3
+\workexp{Mobile Developer (Part-time)}{Feb 2021 -- Oct 2021}
+{Tech Bay Portal $\cdot$ UAE (Remote)}
+{
+    \item Collaborated with a multinational agile team to deliver mobile solutions.
+    \item Implemented real-time tracking features for a Taxi application using \textbf{Socket.io}.
+    \item \textbf{Stack:} Flutter, Socket.io, Jira.
+}
+
+% JOB 4
+\workexp{Mobile Developer}{Aug 2019 -- Sep 2020}
+{FekraSoft Co $\cdot$ Cairo, Egypt}
+{
+    \item Mentored team members on Flutter concepts including Async-Await, Streams, RxDart, and Dependency Injection.
+    \item Developed an e-commerce app featuring barcode scanning functionality.
+    \item Enhanced existing PDF applications by implementing file encryption and secure download features.
+    \item \textbf{Stack:} Dart, Flutter, Java (Android Native).
+}
+
+\end{paracol}
+
+\end{document}
