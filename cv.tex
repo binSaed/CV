@@ -5,25 +5,19 @@
 %----------------------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[default]{lato} % Modern sans-serif font
-\usepackage[margin=1cm]{geometry}
+\usepackage[default]{lato}
+\usepackage[left=0.7cm, right=0.7cm, top=0.6cm, bottom=0.5cm]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{paracol} % For two-column layout
+\usepackage{paracol}
 \usepackage{titlesec}
 \usepackage{tikz}
-\usepackage{color} % For absolute positioning (overlay)
 
 %----------------------------------------------------------------------------------------
-%	FIX INDENTATION (THE SOLUTION IS HERE)
+%	FIX INDENTATION
 %----------------------------------------------------------------------------------------
-\setlength{\parindent}{0pt} % This removes the unwanted spaces
-
-%----------------------------------------------------------------------------------------
-%	PREVENT WORD SPLITTING (HYPHENATION)
-%----------------------------------------------------------------------------------------
-% Standard CV fix: raggedright aligns text left without hyphenation
+\setlength{\parindent}{0pt}
 \raggedright
 
 %----------------------------------------------------------------------------------------
@@ -31,6 +25,7 @@
 %----------------------------------------------------------------------------------------
 \definecolor{primary}{HTML}{2b2b2b}
 \definecolor{accent}{HTML}{004f9f}
+\definecolor{techstack}{HTML}{555555}
 
 \hypersetup{
     colorlinks=true,
@@ -40,7 +35,6 @@
 
 \pagestyle{empty}
 
-% Section Headers
 \titleformat{\section}
 {\large\bfseries\color{primary}\uppercase}
 {}
@@ -48,21 +42,20 @@
 {}
 [\titlerule]
 
-\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
 
-% Set your last updated date here
-% Format: DDth MMM YYYY (e.g., 18th Feb 2026)
 \newcommand{\lastupdated}{\today}
 
-% Command for Work Experience
-\newcommand{\workexp}[4]{
+% Work Experience (5 params: title, dates, company, tech stack, bullets)
+\newcommand{\workexp}[5]{
     \noindent \textbf{#1} \hfill \textbf{#2} \\
-    \textit{#3}
-    \vspace{2pt}
+    \textit{#3} \\
+    {\small\color{techstack}\textbf{Stack:} #4}
+    \vspace{1pt}
     \begin{itemize}[noitemsep,topsep=0pt,leftmargin=1.5em]
-    #4
+    #5
     \end{itemize}
-    \vspace{6pt}
+    \vspace{4pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -73,187 +66,160 @@
 %----------------------------------------------------------------------------------------
 %	HEADER
 %----------------------------------------------------------------------------------------
-% Overlay "Last Updated" in top right corner (doesn't take vertical space)
-    \noindent\begin{tikzpicture}[remember picture,overlay,baseline]
-    \node[anchor=north east, xshift=-0.5cm, yshift=-0.3cm] at (current page.north east) {
-        \tiny Last Updated on \lastupdated
-    };
-    \end{tikzpicture}
+\noindent\begin{tikzpicture}[remember picture,overlay,baseline]
+\node[anchor=north east, xshift=-0.5cm, yshift=-0.3cm] at (current page.north east) {
+    \tiny Last Updated on \lastupdated
+};
+\end{tikzpicture}
 
-    \vspace*{-14pt}
+\vspace*{-14pt}
 
-    \begin{center}
-        {\Huge \textbf{\hypersetup{urlcolor=primary}\href{https://bnsaed.com}{Abdelrahman Saed}}} \\
-        \vspace{8pt}
-    {\Large \textbf{\color{accent}Senior/Lead Mobile Engineer}} \\ \vspace{5pt}
-        \small Cairo, Egypt / Remote $\cdot$ \href{tel:+201151034858}{(+20) 1151034858} $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
-        \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
-    \end{center}
+\begin{center}
+    {\Huge \textbf{\hypersetup{urlcolor=primary}\href{https://bnsaed.com}{Abdelrahman Saed}}} \\
+    \vspace{6pt}
+    {\Large \textbf{\color{accent}Lead Mobile Engineer}} \\ \vspace{4pt}
+    \small Cairo, Egypt / Remote $\cdot$ \href{tel:+201151034858}{(+20) 1151034858} $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
+    \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
+\end{center}
 
-    \vspace{-8pt}
+\vspace{-8pt}
 
 %----------------------------------------------------------------------------------------
 %	TWO-COLUMN LAYOUT
 %----------------------------------------------------------------------------------------
-    \columnratio{0.32}
-    \setlength{\columnsep}{1.5em}
+\columnratio{0.30}
+\setlength{\columnsep}{1.5em}
 
-    \begin{paracol}{2}
+\begin{paracol}{2}
 
 %----------------------------------------------------------------------------------------
 %	LEFT COLUMN (SIDEBAR)
 %----------------------------------------------------------------------------------------
 
-        \section{Skills}\label{sec:skills}
+    \section{Skills}\label{sec:skills}
 
-        \textbf{Mobile} \\
-        Flutter, Dart, Android, iOS
+    \textbf{Mobile} \\
+    Flutter, Dart, Android, iOS
 
-        \vspace{6pt}
+    \vspace{5pt}
 
-        \textbf{Architecture} \\
-        Clean Architecture, MVVM, DI, SOLID
+    \textbf{Architecture} \\
+    Clean Architecture, MVVM, BLoC, \\
+    DI, SOLID, Design Patterns
 
-        \vspace{6pt}
+    \vspace{5pt}
 
-        \textbf{DevOps \& Tools} \\
-        CI/CD, GitHub Actions, Codemagic,\\
-        Firebase, REST, GraphQL
+    \textbf{DevOps \& Tools} \\
+    CI/CD, GitHub Actions, Codemagic, \\
+    Firebase, REST, GraphQL
 
-        \vspace{4pt}
+    \vspace{5pt}
 
+    \textbf{Leadership} \\
+    Architecture Ownership, Release \\
+    Governance, Code Review, Mentoring
 
-        \section{Education}\label{sec:education}
-        \textbf{B.Sc. in MIS}\\
-        Ain Shams Academy \\
-        \textit{Cairo, Egypt}
+    \vspace{3pt}
 
-        \vspace{4pt}
+    \section{Education}\label{sec:education}
+    \textbf{B.Sc. in MIS}\\
+    Ain Shams Academy \\
+    \textit{Cairo, Egypt}
 
+    \vspace{3pt}
 
-        \section{Projects \& Open Source}\label{sec:projects-&-open-source}
+    \section{Open Source}\label{sec:open-source}
 
-        \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{Cached\_pdfview Package}} \\
-        Flutter plugin adopted by \textbf{5,000+ developers}, with automated CI/CD and clean architecture.
+    \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{Cached\_pdfview}} \\
+    Flutter PDF plugin adopted by \textbf{5,000+ developers} with automated CI/CD.
 
-        \vspace{6pt}
+    \vspace{5pt}
 
-        \textbf{\href{https://pub.dev/packages/flutter_zoom_checker}{flutter\_zoom\_checker}} \\
-        Plugin to detect display zoom state on iOS and Android.
+    \textbf{\href{https://play.google.com/store/apps/details?id=com.stickerawy.stickers}{Stickerawy}} \\
+    WhatsApp stickers app with \textbf{500K+ installs} on Google Play.
 
-        \vspace{6pt}
+    \vspace{5pt}
 
-        \textbf{\href{https://pub.dev/packages/clipboard_plus}{clipboard\_plus}} \\
-        Flutter plugin for enhanced clipboard functionality with iOS UIPasteboard support.
+    \textbf{\href{https://pub.dev/packages/flutter_zoom_checker}{flutter\_zoom\_checker}} \\
+    Display zoom detection for iOS/Android.
 
+    \vspace{5pt}
 
-        \vspace{6pt}
+    \textbf{\href{https://pub.dev/packages/clipboard_plus}{clipboard\_plus}} \\
+    Enhanced clipboard with iOS UIPasteboard support.
 
-        \textbf{\href{https://github.com/binSaed/dio_firebase_performance_plus}{dio\_firebase\_performance\_plus}} \\
-        Dio interceptor that sends HTTP request metrics to Firebase Performance Monitoring.
+    \vspace{5pt}
 
-        \vspace{6pt}
+    \textbf{\href{https://github.com/binSaed/dio_firebase_performance_plus}{dio\_firebase\_perf\_plus}} \\
+    Dio interceptor for Firebase Performance metrics.
 
-        \textbf{\href{https://play.google.com/store/apps/details?id=com.stickerawy.stickers}{Stickerawy}} \\
-        WhatsApp stickers app with \textbf{500k+ installs} on Google Play.
+    \vspace{3pt}
 
-        \vspace{6pt}
+    \section{Languages}\label{sec:languages}
+    \textbf{Arabic:} Native
+    \hspace{8pt}
+    \textbf{English:} Professional
 
+    \vspace{10pt}
 
-        \textbf{\href{https://play.google.com/store/search?q=ibnalsham}{Ibnalsham}} \\
-        API caching, app upgrader alerts, social login (Google/Apple/Facebook), maps, FCM, and notifications.
-
-        \vspace{6pt}
-
-        \textbf{\href{https://apkpure.com/suhaib-digital-base/com.Suhaib_Digital_Base}{Suhaib Digital Base}} \\
-        Book sharing app with admin features.
-
-        \vspace{6pt}
-
-        \textbf{\href{https://github.com/binSaed/ESP32-Home}{ESP32-Home}} \\
-        ESP32-based smart home solution with web server control and Apple HomeKit integration.
-
-        \vspace{6pt}
-
-        \textbf{Ugigs Streams} \\
-        Live streaming app with real-time chat, Agora.io video, and Stripe payments.
-
-        \vspace{4pt}
-
-        \section{Languages}\label{sec:languages}
-        \textbf{Arabic:} Native
-        \hspace{8pt}
-        \textbf{English:} Professional
-
-        \vspace{12pt}
-
-        \switchcolumn
+    \switchcolumn
 
 %----------------------------------------------------------------------------------------
 %	RIGHT COLUMN (MAIN CONTENT)
 %----------------------------------------------------------------------------------------
 
+    \section{Summary}\label{sec:summary}
+    Lead Mobile Engineer with 7+ years shipping production mobile products at scale.
+    Own mobile architecture, release governance, and delivery for a 4-engineer squad serving \textbf{5M+ users}.
+    Sole owner of the full mobile stack for \textbf{1.5M users} during a critical team transition.
+    Open-source maintainer with packages adopted by \textbf{5,000+ developers}.
 
-        \section{Summary}\label{sec:summary}
-        Lead Mobile Engineer with 7 years of experience, owning mobile architecture, delivery, and production stability for an EdTech platform serving \textbf{5M+ users}.
-        Sole owner of the mobile product for \textbf{1.5M users} during a critical team transition.
-        Strong foundation in \textbf{Flutter}, clean architecture, CI/CD, and open-source.
+    \section{Experience}\label{sec:experience}
 
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
+    \workexp{Lead Mobile Engineer}{Jul 2025 -- Present}
+    {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
+    {Flutter, Dart, GitHub Actions, Firebase, GraphQL, REST}
+    {
+        \item Led 4 mobile engineers, owning architecture decisions, release governance, and delivery timelines across iOS and Android.
+        \item Reduced release cycle from 4 weeks to 1 week by implementing trunk-based development, feature flags, and automated CI/CD\@.
+        \item Established Flutter architecture standards and code review processes, improving team velocity and maintainability.
+        \item Drove cross-functional alignment with Product, Design, and QA to ship features on predictable cadences for \textbf{5M+ users}.
+    }
 
+    \workexp{Senior Mobile Engineer}{Jan 2022 -- Jul 2025}
+    {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
+    {Flutter, Dart, Codemagic, Firebase, REST, GraphQL}
+    {
+        \item Achieved \textbf{99.9\% crash-free rate} by profiling and resolving critical performance bottlenecks in production.
+        \item Architected core mobile infrastructure: state management, caching, networking, and local storage layers.
+        \item Owned CI/CD pipelines and App Store / Play Store release processes, ensuring consistent deployments.
+        \item Maintained full-stack stability (mobile, backend, cloud) as \textbf{sole engineer for 1.5M users} during team transition.
+    }
 
-        \section{Experience}\label{sec:experience}
+    \workexp{Mobile Engineer}{Oct 2020 -- Jan 2022}
+    {\href{https://www.linkedin.com/company/happytrip-ar}{Happy Trip} $\cdot$ Cairo, Egypt}
+    {Flutter, Dart, REST, Firebase}
+    {
+        \item Led a 2-person Flutter team, owning task allocation, code reviews, and sprint delivery.
+        \item Engineered a reusable networking layer with caching and error handling, \textbf{reducing boilerplate by 60\%}.
+        \item Shipped core flight/hotel booking app and internal HR and POS tools from zero to production.
+    }
 
-        % JOB 1a - iStoria (Lead)
-        \workexp{Lead Mobile Engineer}{Jul 2025 -- Present}
-        {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
-        {
-            \item Lead a team of 4 mobile engineers, owning architecture decisions, delivery, and release management across iOS and Android.
-        \item Reduced release cycle from 4 weeks to 1 week by introducing trunk-based development, feature flags, and automated CI/CD\@.
-        \item Established scalable Flutter architecture patterns and engineering standards, improving team velocity and code maintainability.
-        \item Drive cross-functional collaboration with Product, Design, and QA to deliver high-impact features on predictable timelines.
-        \item Optimize app performance and production stability at scale, serving 5M+ users.
-        }
+    \workexp{Mobile Engineer (Part-time)}{Feb 2021 -- Oct 2021}
+    {Tech Bay Portal $\cdot$ UAE (Remote)}
+    {Flutter, Dart, Socket.io, Google Maps}
+    {
+        \item Built real-time GPS tracking for a ride-hailing app using Socket.io with a distributed team.
+    }
 
-        % JOB 1b - iStoria (Senior)
-        \workexp{Senior Software Engineer}{Jan 2022 -- Jul 2025}
-        {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
-        {
-            \item Achieved a \textbf{99.9\% crash-free rate} by identifying and resolving critical performance bottlenecks in production.
-            \item Architected core mobile infrastructure: state management, caching, networking, and local storage layers.
-        \item Owned CI/CD pipelines and app store release processes, ensuring consistent and reliable deployments.
-        \item Adapted and customized third-party packages to meet product-specific requirements at scale.
-        \item Maintained end-to-end system stability (mobile, backend, cloud) for \textbf{1.5M users} as the sole engineer during a critical team transition.
-        }
+    \workexp{Mobile Engineer}{Aug 2019 -- Sep 2020}
+    {\href{https://www.linkedin.com/company/fekrasoft}{FekraSoft Co} $\cdot$ Cairo, Egypt}
+    {Flutter, Dart, RxDart, Firebase}
+    {
+        \item Mentored engineers on advanced Flutter patterns (Streams, RxDart, DI), accelerating team onboarding.
+        \item Shipped e-commerce and PDF apps with barcode scanning, file encryption, and secure downloads.
+    }
 
-        % JOB 2
-        \workexp{Mid-Sr. Mobile Engineer}{Oct 2020 -- Jan 2022}
-        {\href{https://www.linkedin.com/company/happytrip-ar}{Happy Trip} $\cdot$ Cairo, Egypt}
-        {
-            \item Led a Flutter team of 2 developers, managing task allocation and code reviews.
-        \item Engineered a reusable networking layer with caching, queueing, and error handling, \textbf{reducing boilerplate code by 60\%}.
-        \item Built the core flight and hotel booking app alongside internal HR and POS tools.
-        }
-
-        % JOB 3
-        \workexp{Mobile Engineer (Part-time)}{Feb 2021 -- Oct 2021}
-        {Tech Bay Portal $\cdot$ UAE (Remote)}
-        {
-            \item Built real-time GPS tracking features for a ride-hailing app using Flutter and Socket.io.
-            \item Collaborated with a distributed multinational team in an agile workflow.
-        }
-
-        % JOB 4
-        \workexp{Mobile Engineer}{Aug 2019 -- Sep 2020}
-        {\href{https://www.linkedin.com/company/fekrasoft}{FekraSoft Co} $\cdot$ Cairo, Egypt}
-        {
-            \item Mentored engineers on advanced Flutter patterns: Streams, RxDart, and Dependency Injection.
-        \item Developed an e-commerce app with integrated barcode scanning functionality.
-        \item Enhanced PDF applications with file encryption and secure download features.
-        }
-
-    \end{paracol}
+\end{paracol}
 
 \end{document}
