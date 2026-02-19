@@ -35,11 +35,11 @@
 
 % Section Headers
 \titleformat{\section}
-  {\large\bfseries\color{primary}\uppercase}
-  {}
-  {0em}
-  {}
-  [\titlerule]
+{\large\bfseries\color{primary}\uppercase}
+{}
+{0em}
+{}
+[\titlerule]
 
 \titlespacing{\section}{0pt}{10pt}{5pt}
 
@@ -53,7 +53,7 @@
     \textit{#3}
     \vspace{2pt}
     \begin{itemize}[noitemsep,topsep=0pt,leftmargin=1.5em]
-        #4
+    #4
     \end{itemize}
     \vspace{6pt}
 }
@@ -67,163 +67,165 @@
 %	HEADER
 %----------------------------------------------------------------------------------------
 % Overlay "Last Updated" in top right corner (doesn't take vertical space)
-\noindent\begin{tikzpicture}[remember picture,overlay,baseline]
+    \noindent\begin{tikzpicture}[remember picture,overlay,baseline]
     \node[anchor=north east, xshift=-0.5cm, yshift=-0.3cm] at (current page.north east) {
         \tiny Last Updated on \lastupdated
     };
-\end{tikzpicture}
+    \end{tikzpicture}
 
-\vspace*{-14pt}
+    \vspace*{-14pt}
 
-\begin{center}
-    {\Huge \textbf{Abdelrahman Saed}} \\ \vspace{5pt}
+    \begin{center}
+        {\Huge \textbf{Abdelrahman Saed}} \\ \vspace{5pt}
     {\Large \textbf{\color{accent}Senior/Lead Mobile Engineer}} \\ \vspace{5pt}
-    \small Cairo, Egypt / Remote $\cdot$ (+20) 1151034858 $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
-    \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
-\end{center}
+        \small Cairo, Egypt / Remote $\cdot$ (+20) 1151034858 $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
+        \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
+    \end{center}
 
-\vspace{-8pt}
+    \vspace{-8pt}
 
 %----------------------------------------------------------------------------------------
 %	TWO-COLUMN LAYOUT
 %----------------------------------------------------------------------------------------
-\columnratio{0.32}
-\setlength{\columnsep}{1.5em}
+    \columnratio{0.32}
+    \setlength{\columnsep}{1.5em}
 
-\begin{paracol}{2}
+    \begin{paracol}{2}
 
 %----------------------------------------------------------------------------------------
 %	LEFT COLUMN (SIDEBAR)
 %----------------------------------------------------------------------------------------
 
-\section{Skills}
+        \section{Skills}
 
-\textbf{Languages} \\
-Dart, Java, Kotlin, JavaScript (Node.js), SQL
+        \textbf{Flutter \& Mobile} \\
+        Flutter, Dart, Android, iOS
 
-\vspace{6pt}
+        \vspace{6pt}
 
-\textbf{Mobile Frameworks} \\
-Flutter (Expert), Android Native, iOS (Basic)
+        \textbf{Architecture} \\
+        Clean Architecture, MVVM, DI, SOLID
 
-\vspace{6pt}
+        \vspace{6pt}
 
-\textbf{Backend \& Web} \\
-Node.js, Firebase, GraphQL, Socket.io, REST APIs
+        \textbf{DevOps \& Backend} \\
+        CI/CD, GitHub Actions, Codemagic, Firebase, REST, GraphQL
 
-\vspace{6pt}
+        \vspace{6pt}
 
-\textbf{Tools \& DevOps} \\
-Git, Bitbucket, Jira, CI/CD, FVM, Trello
+        \textbf{Architecture} \\
+        Clean Architecture, MVVM, Dependency Injection, SOLID Principles
 
-\vspace{6pt}
+        \vspace{12pt}
 
-\textbf{Architecture} \\
-Clean Architecture, MVVM, Dependency Injection, SOLID Principles
 
-\vspace{12pt}
+        \section{Education}
+        \textbf{B.Sc. Management Information Systems} \\
+        Ain Shams Academy \\
+        \textit{Cairo, Egypt}
 
-\section{Education}
-\textbf{B.Sc. Management Information Systems} \\
-Ain Shams Academy \\
-\textit{Cairo, Egypt}
+        \vspace{12pt}
 
-\vspace{12pt}
 
-\section{Languages}
-\textbf{Arabic:} Native \\
-\textbf{English:} Professional
+        \section{Languages}
+        \textbf{Arabic:} Native \\
+        \textbf{English:} Professional
 
-\vspace{12pt}
+        \vspace{12pt}
 
 % --- NEW MERGED PROJECTS SECTION ---
-\section{Projects \& Open Source}
 
-\textbf{Cached\_pdfview Package} \\
-Created a Flutter plugin used by \textbf{5,000+ developers}. Focus on clean code \& CI/CD.
 
-\vspace{6pt}
+        \section{Projects \& Open Source}
 
-\textbf{Stickerawy (Android)} \\
-WhatsApp stickers app with \textbf{500k+ installs} on Google Play. Admob integrated.
+        \textbf{Cached\_pdfview Package} \\
+        Created a Flutter plugin used by \textbf{5,000+ developers}. Focus on clean code \& CI/CD.
 
-\vspace{6pt}
+        \vspace{6pt}
 
-\textbf{Ugigs Streams} \\
-Live streaming app using Agora.io, Stripe payments, and real-time Pusher chat.
+        \textbf{Stickerawy (Android)} \\
+        WhatsApp stickers app with \textbf{500k+ installs} on Google Play. Admob integrated.
 
-\vspace{6pt}
+        \vspace{6pt}
 
-\textbf{bnsaed.com} \\
-Personal portfolio built with Flutter Web.
+        \textbf{Ugigs Streams} \\
+        Live streaming app using Agora.io, Stripe payments, and real-time Pusher chat.
 
-\switchcolumn
+        \vspace{6pt}
+
+        \textbf{bnsaed.com} \\
+        Personal portfolio built with Flutter Web.
+
+        \switchcolumn
 
 %----------------------------------------------------------------------------------------
 %	RIGHT COLUMN (MAIN CONTENT)
 %----------------------------------------------------------------------------------------
 
-\section{Summary}
-Lead Mobile Engineer with 7 years of experience building scalable, high-performance mobile apps with \textbf{Flutter}.
-Leading mobile at an EdTech platform serving \textbf{5M+ users}, owning architecture, delivery, and production stability.
-Product-led and impact-driven, with proven ability to operate autonomously---including full ownership of the mobile product during a critical team transition, supporting \textbf{1.5M active users} at the time. Strong background in clean architecture and open-source.
+
+        \section{Summary}
+        Lead Mobile Engineer with 7 years of experience building scalable, high-performance mobile apps with \textbf{Flutter}.
+        Leading mobile at an EdTech platform serving \textbf{5M+ users}, owning architecture, delivery, and production stability.
+        Product-led and impact-driven, with proven ability to operate autonomously---including full ownership of the mobile product during a critical team transition, supporting \textbf{1.5M active users} at the time. Strong background in clean architecture and open-source.
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\section{Experience}
+
+
+        \section{Experience}
 
 % JOB 1a - iStoria (Lead)
-\workexp{Lead Mobile Engineer}{Jul 2025 -- Present}
-{iStoria $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
-{
-    \item Lead a mobile team of 4 engineers, owning architecture, delivery, and release processes across iOS \& Android.
-    \item Reduced release cycle from 4 weeks to 1 week by migrating to trunk-based development, using feature flags, and improving CI/CD + internal testing.
-    \item Owned CI/CD pipelines and store releases via Codemagic and GitHub Actions, improving deployment reliability and speed.
-    \item Defined scalable Flutter architecture patterns and engineering standards to improve maintainability and team velocity.
-    \item Partnered with Product, Design, and QA to deliver business-aligned features with predictable timelines.
-    \item Improved app performance and production stability through hands-on debugging and monitoring at scale (5M+ users).
-}
+        \workexp{Lead Mobile Engineer}{Jul 2025 -- Present}
+        {iStoria $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
+        {
+            \item Lead a mobile team of 4 engineers, owning architecture, delivery, and release processes across iOS \& Android.
+        \item Reduced release cycle from 4 weeks to 1 week by migrating to trunk-based development, using feature flags, and improving CI/CD + internal testing.
+        \item Owned CI/CD pipelines and store releases via Codemagic and GitHub Actions, improving deployment reliability and speed.
+        \item Defined scalable Flutter architecture patterns and engineering standards to improve maintainability and team velocity.
+        \item Partnered with Product, Design, and QA to deliver business-aligned features with predictable timelines.
+        \item Improved app performance and production stability through hands-on debugging and monitoring at scale (5M+ users).
+        }
 
 % JOB 1b - iStoria (Senior)
-\workexp{Senior Software Engineer}{Jan 2022 -- Jul 2025}
-{iStoria $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
-{
-    \item Improved application stability by resolving performance bottlenecks and critical production issues, achieving a \textbf{99.9\% crash-free rate}.
-    \item Took ownership of core mobile infrastructure, including state management, caching, networking, and local data storage.
-    \item Customized third-party packages to meet product and scalability needs.
-    \item Owned CI/CD deployments and release processes across app stores.
-    \item Maintained end-to-end system stability (mobile, backend, and cloud) for 1.5M users as the sole engineer during a critical period.
-}
+        \workexp{Senior Software Engineer}{Jan 2022 -- Jul 2025}
+        {iStoria $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
+        {
+            \item Improved application stability by resolving performance bottlenecks and critical production issues, achieving a \textbf{99.9\% crash-free rate}.
+        \item Took ownership of core mobile infrastructure, including state management, caching, networking, and local data storage.
+        \item Customized third-party packages to meet product and scalability needs.
+        \item Owned CI/CD deployments and release processes across app stores.
+        \item Maintained end-to-end system stability (mobile, backend, and cloud) for 1.5M users as the sole engineer during a critical period.
+        }
 
 % JOB 2
-\workexp{Mid-Sr. Mobile Developer}{Oct 2020 -- Jan 2022}
-{Happy Trip $\cdot$ Cairo, Egypt}
-{
-    \item \textbf{Leadership:} Led a Flutter team of 2 developers, managing task distribution and conducting code reviews.
-    \item Designed a custom networking package handling caching (memory/persistence), queueing, and error handling, which \textbf{reduced networking code by 60\%}.
-    \item Developed the main "Happy Trip" app for flight and hotel bookings, along with internal management tools (HR, POS).
-    \item \textbf{Stack:} Flutter, Node.js, GraphQL, Firebase, Trello.
-}
+        \workexp{Mid-Sr. Mobile Developer}{Oct 2020 -- Jan 2022}
+        {Happy Trip $\cdot$ Cairo, Egypt}
+        {
+            \item \textbf{Leadership:} Led a Flutter team of 2 developers, managing task distribution and conducting code reviews.
+        \item Designed a custom networking package handling caching (memory/persistence), queueing, and error handling, which \textbf{reduced networking code by 60\%}.
+        \item Developed the main "Happy Trip" app for flight and hotel bookings, along with internal management tools (HR, POS).
+        \item \textbf{Stack:} Flutter, Node.js, GraphQL, Firebase, Trello.
+        }
 
 % JOB 3
-\workexp{Mobile Developer (Part-time)}{Feb 2021 -- Oct 2021}
-{Tech Bay Portal $\cdot$ UAE (Remote)}
-{
-    \item Collaborated with a multinational agile team to deliver mobile solutions.
-    \item Implemented real-time tracking features for a Taxi application using \textbf{Socket.io}.
-    \item \textbf{Stack:} Flutter, Socket.io, Jira.
-}
+        \workexp{Mobile Developer (Part-time)}{Feb 2021 -- Oct 2021}
+        {Tech Bay Portal $\cdot$ UAE (Remote)}
+        {
+            \item Collaborated with a multinational agile team to deliver mobile solutions.
+            \item Implemented real-time tracking features for a Taxi application using \textbf{Socket.io}.
+            \item \textbf{Stack:} Flutter, Socket.io, Jira.
+        }
 
 % JOB 4
-\workexp{Mobile Developer}{Aug 2019 -- Sep 2020}
-{FekraSoft Co $\cdot$ Cairo, Egypt}
-{
-    \item Mentored team members on Flutter concepts including Async-Await, Streams, RxDart, and Dependency Injection.
-    \item Developed an e-commerce app featuring barcode scanning functionality.
-    \item Enhanced existing PDF applications by implementing file encryption and secure download features.
-    \item \textbf{Stack:} Dart, Flutter, Java (Android Native).
-}
+        \workexp{Mobile Developer}{Aug 2019 -- Sep 2020}
+        {FekraSoft Co $\cdot$ Cairo, Egypt}
+        {
+            \item Mentored team members on Flutter concepts including Async-Await, Streams, RxDart, and Dependency Injection.
+        \item Developed an e-commerce app featuring barcode scanning functionality.
+        \item Enhanced existing PDF applications by implementing file encryption and secure download features.
+        \item \textbf{Stack:} Dart, Flutter, Java (Android Native).
+        }
 
-\end{paracol}
+    \end{paracol}
 
 \end{document}
