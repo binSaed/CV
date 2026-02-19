@@ -12,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage{paracol} % For two-column layout
 \usepackage{titlesec}
+\usepackage{tikz} % For absolute positioning (overlay)
 
 %----------------------------------------------------------------------------------------
 %	FIX INDENTATION (THE SOLUTION IS HERE)
@@ -42,6 +43,10 @@
 
 \titlespacing{\section}{0pt}{10pt}{5pt}
 
+% Set your last updated date here
+% Format: DDth MMM YYYY (e.g., 18th Feb 2023)
+\newcommand{\lastupdated}{\today}
+
 % Command for Work Experience
 \newcommand{\workexp}[4]{
     \noindent \textbf{#1} \hfill \textbf{#2} \\
@@ -61,6 +66,15 @@
 %----------------------------------------------------------------------------------------
 %	HEADER
 %----------------------------------------------------------------------------------------
+% Overlay "Last Updated" in top right corner (doesn't take vertical space)
+\noindent\begin{tikzpicture}[remember picture,overlay,baseline]
+    \node[anchor=north east, xshift=-0.5cm, yshift=-0.3cm] at (current page.north east) {
+        \tiny Last Updated on \lastupdated
+    };
+\end{tikzpicture}
+
+\vspace*{-12pt}
+
 \begin{center}
     {\Huge \textbf{Abdelrahman Saed}} \\ \vspace{5pt}
     {\Large \textbf{\color{accent}Senior/Lead Mobile Engineer}} \\ \vspace{5pt}
@@ -68,7 +82,7 @@
     \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
 \end{center}
 
-\vspace{10pt}
+\vspace{-6pt}
 
 %----------------------------------------------------------------------------------------
 %	TWO-COLUMN LAYOUT
