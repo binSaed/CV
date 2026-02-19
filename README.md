@@ -1,6 +1,7 @@
 # [CV - Abdelrahman Saed](https://bnsaed.com/CV/cv.pdf)
 
-![CI](https://github.com/bnsaed/CV/workflows/Regenerate%20CV%20PDF/badge.svg)
+[![Regenerate CV PDF](https://github.com/binSaed/CV/actions/workflows/regenerate-cv.yml/badge.svg)](https://github.com/binSaed/CV/actions/workflows/regenerate-cv.yml)
+
 
 LaTeX-based professional CV/resume.
 
