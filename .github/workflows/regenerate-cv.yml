@@ -8,6 +8,10 @@ on:
       - 'cv.tex'
       - '**.tex'
 
+concurrency:
+  group: regenerate-cv
+  cancel-in-progress: true
+
 permissions:
   contents: write
 

@@ -1,5 +1,7 @@
 # [CV - Abdelrahman Saed](https://bnsaed.com/CV/cv.pdf)
 
+![CI](https://github.com/bnsaed/CV/workflows/Regenerate%20CV%20PDF/badge.svg)
+
 LaTeX-based professional CV/resume.
 
 ## Prerequisites
@@ -62,3 +64,14 @@ Packages are installed automatically on first use, or use MiKTeX Console.
 
 - [cv.tex](cv.tex) - Main CV source file
 - [cv.pdf](cv.pdf) - Generated PDF output
+
+## Automation
+
+This repository uses GitHub Actions to automatically regenerate `cv.pdf` whenever `.tex` files are pushed to the `main` branch. The workflow:
+
+1. Triggers on push to `main` when `.tex` files change
+2. Installs required LaTeX packages
+3. Builds the PDF using `pdflatex`
+4. Commits and pushes the updated PDF back to the repository
+
+The workflow definition is in [`.github/workflows/regenerate-cv.yml`](.github/workflows/regenerate-cv.yml).
