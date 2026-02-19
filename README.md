@@ -3,7 +3,17 @@
 [![Regenerate CV PDF](https://github.com/binSaed/CV/actions/workflows/regenerate-cv.yml/badge.svg)](https://github.com/binSaed/CV/actions/workflows/regenerate-cv.yml)
 
 
-LaTeX-based professional CV/resume.
+LaTeX-based professional CV/resume with automated PDF generation via GitHub Actions and deployment via GitHub Pages.
+
+## Use It Yourself
+
+1. **Fork** this repository.
+2. **Edit `cv.tex`** — replace the content with your own information.
+3. **Push to `main`** — GitHub Actions will automatically regenerate `cv.pdf` and commit it.
+4. **Enable GitHub Pages** — go to your repo's **Settings → Pages**, set the source to `main` branch, and your CV will be live at `https://<username>.github.io/CV/cv.pdf`.
+5. **(Optional) Custom domain** — in the same Pages settings, add your custom domain and configure your DNS accordingly.
+
+That's it. Every future edit you push will automatically rebuild and deploy your CV.
 
 ## Prerequisites
 
