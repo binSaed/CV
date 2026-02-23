@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
-\usepackage[left=0.7cm, right=0.62cm, top=0.6cm, bottom=0.2cm]{geometry}
+\usepackage[left=0.7cm, right=0.62cm, top=0.5cm, bottom=0.1cm]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -42,7 +42,7 @@
 {}
 [\titlerule]
 
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{6pt}{3pt}
 
 \newcommand{\lastupdated}{\today}
 
@@ -51,11 +51,11 @@
     \noindent \textbf{#1} \hfill \textbf{#2} \\
     \textit{#3} \\
     {\small\color{techstack}\textbf{Stack:} #4}
-    \vspace{1pt}
+    \vspace{0pt}
     \begin{itemize}[noitemsep,topsep=0pt,leftmargin=1.5em]
     #5
     \end{itemize}
-    \vspace{4pt}
+    \vspace{1pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -76,13 +76,13 @@
 
 \begin{center}
     {\Huge \textbf{\hypersetup{urlcolor=primary}\href{https://bnsaed.com}{Abdelrahman Saed}}} \\
-    \vspace{6pt}
-    {\Large \textbf{\color{accent}Lead Mobile Engineer}} \\ \vspace{4pt}
+    \vspace{4pt}
+    {\Large \textbf{\color{accent}Lead Mobile Engineer}} \\ \vspace{2pt}
     \small Cairo, Egypt / Remote $\cdot$ \href{tel:+201151034858}{(+20) 1151034858} $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
     \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
 \end{center}
 
-\vspace{-6pt}
+\vspace{-8pt}
 
 %----------------------------------------------------------------------------------------
 %	TWO-COLUMN LAYOUT
@@ -101,23 +101,26 @@
     \textbf{Mobile} \\
     Flutter, Dart, Android, iOS
 
-    \vspace{5pt}
+    \vspace{3pt}
 
     \textbf{Architecture \& Data} \\
     Clean Architecture, MVVM, BLoC, \\
-    DI, SOLID, PowerSync, Drift
+    Dependency Injection (DI), SOLID, \\
+    PowerSync, Drift
 
-    \vspace{5pt}
+    \vspace{3pt}
 
-    \textbf{DevOps \& Tools} \\
-    CI/CD, GitHub Actions, Codemagic, \\
-    Firebase, Sentry, REST, GraphQL
+    \textbf{DevOps \& Quality} \\
+    CI/CD, GitHub Actions, \\
+    Codemagic, Firebase, Sentry, \\
+    Integration Testing, REST, GraphQL
 
-    \vspace{5pt}
+    \vspace{3pt}
 
     \textbf{Leadership} \\
-    Architecture Ownership, Release \\
-    Governance, Code Review, Mentoring
+    Architecture Ownership, RFCs, \\
+    Release Governance, Code Review, \\
+    Hiring, Mentoring
 
     \vspace{3pt}
 
@@ -133,40 +136,25 @@
     \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{Cached\_pdfview}} \\
     Flutter PDF plugin adopted by \textbf{5,000+ developers} with automated CI/CD.
 
-    \vspace{5pt}
+    \vspace{3pt}
 
     \textbf{\href{https://pub.dev/packages/flutter_zoom_checker}{flutter\_zoom\_checker}} \\
     Display zoom detection for iOS/Android.
 
-    \vspace{5pt}
+    \vspace{3pt}
 
     \textbf{\href{https://github.com/binSaed/dio_firebase_performance_plus}{dio\_firebase\_perf\_plus}} \\
     Dio interceptor for Firebase Performance metrics.
 
-    \vspace{5pt}
+    \vspace{3pt}
 
     \textbf{\href{https://pub.dev/packages/clipboard_plus}{clipboard\_plus}} \\
     Enhanced clipboard with iOS UIPasteboard support.
 
-    \vspace{5pt}
+    \vspace{3pt}
 
     \textbf{\href{https://play.google.com/store/apps/details?id=com.stickerawy.stickers}{Stickerawy}} \\
     WhatsApp stickers app with \textbf{500K+ installs} on Google Play.
-
-    \vspace{5pt}
-
-    \textbf{\href{https://github.com/binSaed/keyboard_over_network_app}{keyboard\_over\_network}} \\
-    Remote keyboard control over network with companion API\@.
-
-    \vspace{5pt}
-
-    \textbf{\href{https://github.com/binSaed/e-commerce-backend-nodejs}{e-commerce-backend}} \\
-    Full-stack e-commerce backend with Node.js and REST APIs.
-
-    \vspace{5pt}
-
-    \textbf{\href{https://github.com/binSaed/ESP32-Home}{ESP32-Home}} \\
-    Smart home solution with web server and Apple HomeKit integration.
 
     \vspace{3pt}
 
@@ -174,7 +162,7 @@
     \textbf{Arabic:} Native \\
     \textbf{English:} Professional
 
-    \vspace{10pt}
+    \vspace{2pt}
 
     \switchcolumn
 
@@ -183,10 +171,7 @@
 %----------------------------------------------------------------------------------------
 
     \section{Summary}\label{sec:summary}
-    Lead Mobile Engineer with 7 years shipping production mobile products at scale.
-    Own mobile architecture, release governance, and delivery for a 4-engineer squad serving \textbf{5M+ users}.
-    Expert in offline-first mobile architecture, modular system design, and scaling production apps to millions of users.
-    Open-source contributor with \textbf{315+ GitHub stars} and packages adopted by \textbf{5,000+ developers}.
+    Lead Mobile Engineer with 6+ years shipping production mobile products at scale. Own architecture, release governance, and delivery for a squad serving \textbf{5M+ users}. Define technical direction through RFCs and design docs, co-design API contracts with backend teams, and architect offline-first systems for millions of users. Open-source contributor with \textbf{315+ GitHub stars} and packages adopted by \textbf{5,000+ developers}.
 
     \section{Experience}\label{sec:experience}
 
@@ -194,22 +179,22 @@
     {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
     {Flutter, Dart, PowerSync, Drift, Firebase, Sentry, GitHub Actions, GraphQL, REST}
     {
-        \item Led 4 mobile engineers, owning architecture decisions, release governance, and delivery timelines across iOS and Android.
+        \item Led a 4-engineer mobile squad, owning architecture decisions, hiring bar, release governance, and delivery timelines across iOS and Android.
         \item Reduced release cycle from 4 weeks to 1 week by implementing trunk-based development, feature flags, and automated CI/CD\@.
-        \item Architected modular Flutter codebase with \textbf{50+ feature modules} and 140+ routes, establishing team-wide code quality standards.
-        \item Drove cross-functional alignment with Product, Design, and QA to ship features on predictable cadences for \textbf{5M+ users}.
+        \item Architected modular Flutter codebase with \textbf{50+ feature modules} and 140+ routes, documented via RFCs and enforced through CI quality gates and code review standards.
+        \item Negotiated quarterly mobile roadmaps with Product, Design, and QA, balancing feature velocity against tech debt reduction for \textbf{5M+ users}.
     }
 
     \workexp{Senior Mobile Engineer}{Jan 2022 -- Jul 2025}
     {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
     {Flutter, Dart, PowerSync, Drift, Codemagic, Firebase, Sentry, Adjust, REST, GraphQL}
     {
-        \item Achieved \textbf{99.9\% crash-free rate} by profiling and resolving critical performance bottlenecks in production.
-        \item Architected offline-first infrastructure using PowerSync and Drift, plus state management, caching, and networking layers.
-        \item Maintained and adapted \textbf{8+ custom/forked Flutter packages} to meet product-specific requirements at scale.
-        \item Integrated \href{https://webengage.com/}{WebEngage}, \href{https://www.moengage.com/}{MoEngage}, \href{https://clevertap.com/}{CleverTap}, and \href{https://www.adjust.com/}{Adjust} for analytics, personalized notifications, and a referral system, \textbf{boosting engagement and organic growth}.
-        \item Built A/B testing infrastructure using Firebase Remote Config and \href{https://www.growthbook.io/}{GrowthBook}, enabling data-driven feature rollouts.
-        \item Maintained full-stack stability (mobile, backend, cloud) as \textbf{sole engineer for 1.5M users} during team transition.
+        \item Achieved \textbf{99.9\% crash-free rate} by introducing crash budgets, systematic profiling, and CI quality gates that block releases below stability thresholds.
+        \item Designed offline-first infrastructure (PowerSync + Drift), defining sync conflict resolution, schema migration strategy, and data integrity guarantees for millions of users.
+        \item Maintained 8+ custom/forked Flutter packages, contributing fixes upstream and owning long-term maintenance to meet production reliability requirements.
+        \item Built experimentation and analytics platform --- integrating 4 marketing SDKs and architecting A/B testing (Firebase Remote Config + \href{https://www.growthbook.io/}{GrowthBook}) --- enabling data-driven feature rollouts across the full user base.
+        \item Maintained full-stack stability (mobile, backend, cloud) as \textbf{sole engineer for 1.5M users} during team transition, coordinating with Product to prioritize critical fixes.
+        \item Co-designed API contracts with backend engineers, optimizing payload structures and pagination for mobile performance; established integration testing and CI quality gates enforced on every pull request.
     }
 
     \workexp{Mobile Engineer}{Oct 2020 -- Jan 2022}
@@ -217,26 +202,23 @@
     {Flutter, Dart, REST, Firebase}
     {
         \item Owned mobile delivery end-to-end: task planning, code reviews, and sprint execution across the Flutter team.
-        \item Architected a production-grade networking SDK with multi-layer caching, request queueing, auto-retry on reconnect, token refresh, and background JSON parsing, \textbf{cutting networking code by 60\%}.
-        \item Built the company's first mobile platform from scratch, enabling its transition from traditional tourism to a tech-enabled booking service.
-        \item Shipped flight/hotel booking app, internal HR and POS tools from zero to production.
+        \item Architected a networking SDK with multi-layer caching, request queueing, auto-retry, token refresh, and background parsing, \textbf{cutting networking code by 60\%}.
+        \item Designed and delivered the company's first mobile platform (consumer booking, internal HR, POS) in 14 months, enabling a full business pivot from traditional tourism to a tech-enabled service.
     }
 
     \workexp{Mobile Engineer (Part-time)}{Feb 2021 -- Oct 2021}
     {Tech Bay Portal $\cdot$ UAE (Remote)}
     {Flutter, Dart, Socket.io, Google Maps}
     {
-        \item Shipped multiple core features for a ride-hailing platform --- including real-time GPS tracking --- within a large multinational agile team.
-        \item Integrated Socket.io for live driver tracking and trip updates across the taxi platform.
+        \item Delivered real-time GPS tracking and live trip updates (Socket.io, Google Maps) for a ride-hailing platform within a distributed multinational agile team.
     }
 
     \workexp{Mobile Engineer}{Aug 2019 -- Sep 2020}
     {\href{https://www.linkedin.com/company/fekrasoft}{FekraSoft Co} $\cdot$ Cairo, Egypt}
     {Flutter, Dart, RxDart, Firebase}
     {
-        \item Led company-wide Flutter adoption, onboarding engineers from Java/native backgrounds and establishing cross-platform development standards.
-        \item Mentored engineers on advanced patterns (Streams, RxDart, DI), boosting productivity.
-        \item Shipped e-commerce and PDF apps with barcode scanning and encryption.
+        \item Led company-wide Flutter adoption, mentoring engineers transitioning from native Android on advanced patterns (Streams, RxDart, DI) and establishing shared coding standards.
+        \item Shipped production e-commerce and document management apps with barcode scanning and file encryption.
     }
 
 \end{paracol}
