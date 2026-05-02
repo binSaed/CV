@@ -43,7 +43,7 @@
 {}
 [\titlerule]
 
-\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\section}{0pt}{12pt}{6pt}
 
 \newcommand{\lastupdated}{\today}
 
@@ -53,10 +53,10 @@
     \textit{#3} \\
     {\small\color{techstack}\textbf{Stack:} #4}
     \vspace{0pt}
-    \begin{itemize}[noitemsep,topsep=0pt,leftmargin=1.5em]
+    \begin{itemize}[noitemsep,topsep=2pt,leftmargin=1.5em]
     #5
     \end{itemize}
-    \vspace{2pt}
+    \vspace{4pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -118,6 +118,8 @@
         \item Led a 4-engineer mobile squad, owning architecture decisions, hiring bar, release governance, and delivery timelines across iOS and Android.
     \item Reduced release cycle from 4 weeks to 1 week via trunk-based development, feature flags, and end-to-end CI/CD ownership (Codemagic, GitHub Actions, store releases).
     \item Architected modular Flutter codebase with \textbf{50+ feature modules} and 140+ routes applying SOLID and MVVM, documented via RFCs and enforced through CI quality gates and code review.
+    \item Led migration to \href{https://clevertap.com/}{CleverTap} as the primary engagement platform, deprecating the previous stack with zero data loss for active users.
+    \item Cut QA turnaround by shipping internal tooling that builds APKs from any GitHub branch on demand, removing manual hand-offs from the test loop.
     \item Negotiated quarterly mobile roadmaps with Product, Design, and QA, balancing feature velocity against tech debt for \textbf{5M+ users}.
     }
 
