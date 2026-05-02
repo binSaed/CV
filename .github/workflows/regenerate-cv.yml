@@ -32,15 +32,17 @@ jobs:
             texlive-latex-recommended \
             texlive-science
 
-      - name: Build CV PDF
+      - name: Build CV PDFs
         run: |
           pdflatex -interaction=nonstopmode cv.tex
           pdflatex -interaction=nonstopmode cv.tex
+          pdflatex -interaction=nonstopmode cv1.tex
+          pdflatex -interaction=nonstopmode cv1.tex
 
-      - name: Commit and push PDF
+      - name: Commit and push PDFs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add cv.pdf
-          git diff --staged --quiet || git commit -m "Auto-generate CV PDF [skip ci]"
+          git add cv.pdf cv1.pdf
+          git diff --staged --quiet || git commit -m "Auto-generate CV PDFs [skip ci]"
           git push

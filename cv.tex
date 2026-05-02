@@ -1,18 +1,18 @@
 \documentclass[10pt,a4paper]{article}
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES
+%	PACKAGES (single-column, no paracol / no tikz — ATS-friendly variant)
 %----------------------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
-\usepackage[left=0.7cm, right=0.62cm, top=0.5cm, bottom=0.1cm]{geometry}
+\usepackage[left=1.4cm, right=1.4cm, top=1.2cm, bottom=1cm]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{paracol}
 \usepackage{titlesec}
-\usepackage{tikz}
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = *}
 
 %----------------------------------------------------------------------------------------
 %	FIX INDENTATION
@@ -42,7 +42,7 @@
 {}
 [\titlerule]
 
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\titlespacing{\section}{0pt}{12pt}{4pt}
 
 \newcommand{\lastupdated}{\today}
 
@@ -55,7 +55,7 @@
     \begin{itemize}[noitemsep,topsep=0pt,leftmargin=1.5em]
     #5
     \end{itemize}
-    \vspace{1pt}
+    \vspace{2pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -64,115 +64,40 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	HEADER
+%	HEADER (in-flow, no tikz overlay)
 %----------------------------------------------------------------------------------------
-\noindent\begin{tikzpicture}[remember picture,overlay,baseline]
-\node[anchor=north east, xshift=-0.5cm, yshift=-0.3cm] at (current page.north east) {
-    \tiny Last Updated on \lastupdated
-};
-\end{tikzpicture}
+    \noindent\null\hfill{\tiny\color{techstack}Last Updated on \lastupdated}
 
-\vspace*{-4pt}
+    \vspace*{-10pt}
 
-\begin{center}
-    {\Huge \textbf{\hypersetup{urlcolor=primary}\href{https://bnsaed.com}{Abdelrahman Saed}}} \\
-    \vspace{4pt}
-    {\Large \textbf{\color{accent}Lead Mobile Engineer}} \\ \vspace{2pt}
-    \small Cairo, Egypt / Remote $\cdot$ \href{tel:+201151034858}{(+20) 1151034858} $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
-    \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
-\end{center}
+    \begin{center}
+        {\Huge \textbf{\hypersetup{urlcolor=primary}\href{https://bnsaed.com}{Abdelrahman Saed}}} \\
+        \vspace{4pt}
+        {\Large \textbf{\color{accent}Senior Mobile Engineer}} \\ \vspace{2pt}
+        \small Cairo, Egypt / Remote $\cdot$ \href{tel:+201151034858}{(+20) 1151034858} $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
+        \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow}
+    \end{center}
 
-\vspace{-8pt}
+    \vspace{-6pt}
 
 %----------------------------------------------------------------------------------------
-%	TWO-COLUMN LAYOUT
+%	SUMMARY
 %----------------------------------------------------------------------------------------
-\columnratio{0.28}
-\setlength{\columnsep}{1.5em}
-
-\begin{paracol}{2}
-
-%----------------------------------------------------------------------------------------
-%	LEFT COLUMN (SIDEBAR)
-%----------------------------------------------------------------------------------------
-
-    \section{Skills}\label{sec:skills}
-
-    \textbf{Mobile} \\
-    Flutter, Dart, Android, iOS
-
-    \vspace{3pt}
-
-    \textbf{Architecture \& Data} \\
-    Clean Architecture, MVVM, BLoC, \\
-    Dependency Injection (DI), SOLID, \\
-    PowerSync, Drift
-
-    \vspace{3pt}
-
-    \textbf{DevOps \& Quality} \\
-    CI/CD, GitHub Actions, \\
-    Codemagic, Firebase, Sentry, \\
-    Integration Testing, REST, GraphQL
-
-    \vspace{3pt}
-
-    \textbf{Leadership} \\
-    Architecture Ownership, RFCs, \\
-    Release Governance, Code Review, \\
-    Hiring, Mentoring
-
-    \vspace{3pt}
-
-    \section{Education}\label{sec:education}
-    \textbf{B.Sc. in MIS}\\
-    Ain Shams Academy \\
-    \textit{Cairo, Egypt}
-
-    \vspace{3pt}
-
-    \section{Open Source}\label{sec:open-source}
-
-    \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{Cached\_pdfview}} \\
-    Flutter PDF plugin adopted by \textbf{5,000+ developers} with automated CI/CD.
-
-    \vspace{3pt}
-
-    \textbf{\href{https://pub.dev/packages/flutter_zoom_checker}{flutter\_zoom\_checker}} \\
-    Display zoom detection for iOS/Android.
-
-    \vspace{3pt}
-
-    \textbf{\href{https://github.com/binSaed/dio_firebase_performance_plus}{dio\_firebase\_perf\_plus}} \\
-    Dio interceptor for Firebase Performance metrics.
-
-    \vspace{3pt}
-
-    \textbf{\href{https://pub.dev/packages/clipboard_plus}{clipboard\_plus}} \\
-    Enhanced clipboard with iOS UIPasteboard support.
-
-    \vspace{3pt}
-
-    \textbf{\href{https://play.google.com/store/apps/details?id=com.stickerawy.stickers}{Stickerawy}} \\
-    WhatsApp stickers app with \textbf{500K+ installs} on Google Play.
-
-    \vspace{3pt}
-
-    \section{Languages}\label{sec:languages}
-    \textbf{Arabic:} Native \\
-    \textbf{English:} Professional
-
-    \vspace{2pt}
-
-    \switchcolumn
-
-%----------------------------------------------------------------------------------------
-%	RIGHT COLUMN (MAIN CONTENT)
-%----------------------------------------------------------------------------------------
-
     \section{Summary}\label{sec:summary}
-    Lead Mobile Engineer with 6+ years shipping production mobile products at scale. Own architecture, release governance, and delivery for a squad serving \textbf{5M+ users}. Define technical direction through RFCs and design docs, co-design API contracts with backend teams, and architect offline-first systems for millions of users. Open-source contributor with \textbf{315+ GitHub stars} and packages adopted by \textbf{5,000+ developers}.
+    Senior Flutter Engineer with 6+ years shipping production mobile products at scale. Deep expertise in performance optimization, offline-first architecture, and modular codebases serving \textbf{5M+ users}. Proven track record of reducing cold start by \textbf{35\%}, achieving \textbf{99.9\% crash-free rates}, and architecting systems with \textbf{50+ feature modules}. Open-source contributor with \textbf{315+ GitHub stars} and packages adopted by \textbf{5,000+ developers}.
 
+%----------------------------------------------------------------------------------------
+%	SKILLS (inline, standard ATS keywords)
+%----------------------------------------------------------------------------------------
+    \section{Skills}\label{sec:skills}
+    \textbf{Mobile:} Flutter, Dart, Android, iOS \\
+    \textbf{Architecture \& Data:} Clean Architecture, MVVM, BLoC, Dependency Injection (DI), SOLID, PowerSync, Drift \\
+    \textbf{DevOps \& Quality:} CI/CD, GitHub Actions, Codemagic, Firebase, Sentry, Integration Testing, REST, GraphQL \\
+    \textbf{Leadership:} Architecture Ownership, RFCs, Release Governance, Code Review, Hiring, Mentoring
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
     \section{Experience}\label{sec:experience}
 
     \workexp{Lead Mobile Engineer}{Jul 2025 -- Present}
@@ -180,47 +105,70 @@
     {Flutter, Dart, PowerSync, Drift, Firebase, Sentry, GitHub Actions, GraphQL, REST}
     {
         \item Led a 4-engineer mobile squad, owning architecture decisions, hiring bar, release governance, and delivery timelines across iOS and Android.
-        \item Reduced release cycle from 4 weeks to 1 week by implementing trunk-based development, feature flags, and automated CI/CD\@.
-        \item Architected modular Flutter codebase with \textbf{50+ feature modules} and 140+ routes, documented via RFCs and enforced through CI quality gates and code review standards.
-        \item Negotiated quarterly mobile roadmaps with Product, Design, and QA, balancing feature velocity against tech debt reduction for \textbf{5M+ users}.
+    \item Reduced release cycle from 4 weeks to 1 week via trunk-based development, feature flags, and end-to-end CI/CD ownership (Codemagic, GitHub Actions, store releases).
+    \item Architected modular Flutter codebase with \textbf{50+ feature modules} and 140+ routes applying SOLID and MVVM, documented via RFCs and enforced through CI quality gates and code review.
+    \item Negotiated quarterly mobile roadmaps with Product, Design, and QA, balancing feature velocity against tech debt for \textbf{5M+ users}.
     }
 
-    \workexp{Senior Mobile Engineer}{Jan 2022 -- Jul 2025}
+    \workexp{Founding Mobile Engineer}{Jan 2022 -- Jul 2025}
     {\href{https://istoria.app/en/}{iStoria} $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
     {Flutter, Dart, PowerSync, Drift, Codemagic, Firebase, Sentry, Adjust, REST, GraphQL}
     {
-        \item Achieved \textbf{99.9\% crash-free rate} by introducing crash budgets, systematic profiling, and CI quality gates that block releases below stability thresholds.
-        \item Designed offline-first infrastructure (PowerSync + Drift), defining sync conflict resolution, schema migration strategy, and data integrity guarantees for millions of users.
-        \item Maintained 8+ custom/forked Flutter packages, contributing fixes upstream and owning long-term maintenance to meet production reliability requirements.
-        \item Built experimentation and analytics platform --- integrating 4 marketing SDKs and architecting A/B testing (Firebase Remote Config + \href{https://www.growthbook.io/}{GrowthBook}) --- enabling data-driven feature rollouts across the full user base.
-        \item Maintained full-stack stability (mobile, backend, cloud) as \textbf{sole engineer for 1.5M users} during team transition, coordinating with Product to prioritize critical fixes.
-        \item Co-designed API contracts with backend engineers, optimizing payload structures and pagination for mobile performance; established integration testing and CI quality gates enforced on every pull request.
+        \item Achieved \textbf{99.9\% crash-free rate} via crash budgets, systematic profiling, and CI quality gates blocking releases below stability thresholds.
+    \item Designed offline-first infrastructure (PowerSync + Drift) with sync conflict resolution, schema migration, and data integrity guarantees for millions of users.
+    \item Drove a sustained performance program: \textbf{{\raise.17ex\hbox{$\scriptstyle\sim$}}35\% cold-start reduction} (parallelized service providers, deferred post-first-frame SDKs, 35+ eager $\to$ lazy dependencies); \textbf{{\raise.17ex\hbox{$\scriptstyle\sim$}}60\% rendering gains} (RepaintBoundary isolation, background JSON deserialization); \textbf{{\raise.17ex\hbox{$\scriptstyle\sim$}}20\% memory reduction} (eliminating controller/stream leaks).
+    \item Maintained end-to-end stability across \textbf{mobile, backend, and cloud} as \textbf{the sole engineer for 1.5M users} during a team transition, coordinating with Product to prioritize critical fixes.
+    \item Maintained \textbf{8+ custom/forked Flutter packages}, contributing fixes upstream and owning long-term maintenance to meet production reliability requirements.
+    \item Integrated 4 marketing SDKs (\href{https://webengage.com/}{WebEngage}, \href{https://www.moengage.com/}{MoEngage}, \href{https://clevertap.com/}{CleverTap}, \href{https://www.adjust.com/}{Adjust}) and built A/B testing infrastructure (Firebase Remote Config + \href{https://www.growthbook.io/}{GrowthBook}), enabling data-driven feature rollouts and personalized engagement.
     }
 
     \workexp{Mobile Engineer}{Oct 2020 -- Jan 2022}
     {\href{https://www.linkedin.com/company/happytrip-ar}{Happy Trip} $\cdot$ Cairo, Egypt}
     {Flutter, Dart, REST, Firebase}
     {
-        \item Owned mobile delivery end-to-end: task planning, code reviews, and sprint execution across the Flutter team.
-        \item Architected a networking SDK with multi-layer caching, request queueing, auto-retry, token refresh, and background parsing, \textbf{cutting networking code by 60\%}.
-        \item Designed and delivered the company's first mobile platform (consumer booking, internal HR, POS) in 14 months, enabling a full business pivot from traditional tourism to a tech-enabled service.
+        \item Owned mobile delivery end-to-end across the Flutter team --- task planning, code review gates, and sprint execution --- setting the cadence for every release during the platform's first 14 months.
+    \item Architected a networking SDK with multi-layer caching, request queueing, auto-retry, token refresh, and background parsing, \textbf{cutting networking code by 60\%}.
+    \item Designed and delivered the company's first mobile platform (consumer booking, internal HR, POS) in 14 months, enabling a full business pivot from traditional tourism to a tech-enabled service.
     }
 
     \workexp{Mobile Engineer (Part-time)}{Feb 2021 -- Oct 2021}
     {Tech Bay Portal $\cdot$ UAE (Remote)}
     {Flutter, Dart, Socket.io, Google Maps}
     {
-        \item Delivered real-time GPS tracking and live trip updates (Socket.io, Google Maps) for a ride-hailing platform within a distributed multinational agile team.
+        \item Delivered real-time GPS tracking and live trip updates (Socket.io, Google Maps) for a ride-hailing platform.
+    \item Collaborated within a distributed multinational agile team, coordinating asynchronously across time zones alongside a concurrent full-time role.
     }
 
     \workexp{Mobile Engineer}{Aug 2019 -- Sep 2020}
     {\href{https://www.linkedin.com/company/fekrasoft}{FekraSoft Co} $\cdot$ Cairo, Egypt}
     {Flutter, Dart, RxDart, Firebase}
     {
-        \item Led company-wide Flutter adoption, mentoring engineers transitioning from native Android on advanced patterns (Streams, RxDart, DI) and establishing shared coding standards.
-        \item Shipped production e-commerce and document management apps with barcode scanning and file encryption.
+        \item Led company-wide Flutter adoption as the first Flutter engineer, mentoring the Android team through advanced patterns (Streams, RxDart, DI) and authoring the shared coding standards the team still uses.
+    \item Shipped production e-commerce and document management apps with barcode scanning and file encryption.
     }
 
-\end{paracol}
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+    \section{Projects}\label{sec:projects}
+
+    \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{flutter\_cached\_pdfview}} --- Cross-platform Flutter PDF viewer (iOS/Android) with URL/asset/local caching, password-protected PDFs, and gesture-based zoom; \textbf{\href{https://github.com/binSaed/flutter_cached_pdfview/stargazers}{134\textsuperscript{$\star$} on GitHub}}, \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview/score}{500+ likes on pub.dev}}, \textbf{43k+ downloads}. \\
+    \textbf{\href{https://pub.dev/packages/flutter_zoom_checker}{flutter\_zoom\_checker}} --- iOS/Android display-zoom (UI scaling) detection plugin, working around a Flutter framework limitation (\href{https://github.com/flutter/flutter/issues/95421}{issue \#95421}). \\
+    \textbf{\href{https://github.com/binSaed/dio_firebase_performance_plus}{dio\_firebase\_performance\_plus}} --- Dio interceptor streaming HTTP request metrics to Firebase Performance Monitoring. \\
+    \textbf{\href{https://pub.dev/packages/clipboard_plus}{clipboard\_plus}} --- Flutter clipboard plugin with \textbf{silent content-type detection on iOS} (UIPasteboard) --- detects URLs, text, and images without triggering the iOS paste permission dialog. \\
+    \textbf{\href{https://play.google.com/store/apps/details?id=com.stickerawy.stickers}{Stickerawy}} --- WhatsApp stickers Android app with \textbf{500K+ installs} on Google Play. \\
+    \textbf{Open-source contributions:} patches and fixes to \href{https://github.com/Hexer10/youtube_explode_dart/pull/371}{youtube\_explode\_dart}, \href{https://github.com/rodion-m/dio_smart_retry/pull/36}{dio\_smart\_retry}, and \href{https://github.com/growthbook/growthbook-flutter/pulls?q=author:binSaed}{growthbook-flutter}.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+    \section{Education}\label{sec:education}
+    \textbf{Bachelor of Management Information Systems} \hfill \textit{Ain Shams Academy, Cairo, Egypt}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+    \section{Languages}\label{sec:languages}
+    \textbf{Arabic:} Native \quad $\cdot$ \quad \textbf{English:} Professional
 
 \end{document}
