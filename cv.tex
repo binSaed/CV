@@ -11,6 +11,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
+\usepackage{tikz}
 \usepackage{microtype}
 \DisableLigatures[f]{encoding = *, family = *}
 
@@ -66,7 +67,11 @@
 %----------------------------------------------------------------------------------------
 %	HEADER (in-flow, no tikz overlay)
 %----------------------------------------------------------------------------------------
-    \noindent\null\hfill{\tiny\color{techstack}Last Updated on \lastupdated}
+    \noindent\begin{tikzpicture}[remember picture,overlay,baseline]
+\node[anchor=north east, xshift=-0.4cm, yshift=-0.4cm] at (current page.north east) {
+    \tiny Last Updated on \lastupdated
+};
+    \end{tikzpicture}
 
     \vspace*{-10pt}
 
@@ -83,12 +88,16 @@
 %----------------------------------------------------------------------------------------
 %	SUMMARY
 %----------------------------------------------------------------------------------------
+
+
     \section{Summary}\label{sec:summary}
     Senior Flutter Engineer with 6+ years shipping production mobile products at scale. Deep expertise in performance optimization, offline-first architecture, and modular codebases serving \textbf{5M+ users}. Proven track record of reducing cold start by \textbf{35\%}, achieving \textbf{99.9\% crash-free rates}, and architecting systems with \textbf{50+ feature modules}. Open-source contributor with \textbf{315+ GitHub stars} and packages adopted by \textbf{5,000+ developers}.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS (inline, standard ATS keywords)
 %----------------------------------------------------------------------------------------
+
+
     \section{Skills}\label{sec:skills}
     \textbf{Mobile:} Flutter, Dart, Android, iOS \\
     \textbf{Architecture \& Data:} Clean Architecture, MVVM, BLoC, Dependency Injection (DI), SOLID, PowerSync, Drift \\
@@ -98,6 +107,8 @@
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
+
+
     \section{Experience}\label{sec:experience}
 
     \workexp{Lead Mobile Engineer}{Jul 2025 -- Present}
@@ -150,6 +161,8 @@
 %----------------------------------------------------------------------------------------
 %	PROJECTS
 %----------------------------------------------------------------------------------------
+
+
     \section{Projects}\label{sec:projects}
 
     \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{flutter\_cached\_pdfview}} --- Cross-platform Flutter PDF viewer (iOS/Android) with URL/asset/local caching, password-protected PDFs, and gesture-based zoom; \textbf{\href{https://github.com/binSaed/flutter_cached_pdfview/stargazers}{134\textsuperscript{$\star$} on GitHub}}, \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview/score}{500+ likes on pub.dev}}, \textbf{43k+ downloads}. \\
@@ -162,12 +175,16 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
+
+
     \section{Education}\label{sec:education}
     \textbf{Bachelor of Management Information Systems} \hfill \textit{Ain Shams Academy, Cairo, Egypt}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES
 %----------------------------------------------------------------------------------------
+
+
     \section{Languages}\label{sec:languages}
     \textbf{Arabic:} Native \quad $\cdot$ \quad \textbf{English:} Professional
 
