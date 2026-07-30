@@ -11,9 +11,11 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{tikz}
 \usepackage{microtype}
-\DisableLigatures[f]{encoding = *, family = *}
+\usepackage{iftex}
+\ifPDFTeX
+  \DisableLigatures[f]{encoding = *, family = *}
+\fi
 
 %----------------------------------------------------------------------------------------
 %	FIX INDENTATION
@@ -67,20 +69,12 @@
 %----------------------------------------------------------------------------------------
 %	HEADER (in-flow, no tikz overlay)
 %----------------------------------------------------------------------------------------
-    \noindent\begin{tikzpicture}[remember picture,overlay,baseline]
-\node[anchor=north east, xshift=-0.4cm, yshift=-0.4cm] at (current page.north east) {
-    \scriptsize Last Updated on \lastupdated
-};
-    \end{tikzpicture}
-
-    \vspace*{-10pt}
-
     \begin{center}
         {\Huge \textbf{\hypersetup{urlcolor=primary}\href{https://bnsaed.com}{Abdelrahman Saed}}} \\
         \vspace{4pt}
-        {\Large \textbf{\color{accent}Senior / Lead Mobile Engineer}} \\ \vspace{2pt}
+        {\Large \textbf{\color{accent}Senior Mobile Engineer}} \\ \vspace{2pt}
         \small Cairo, Egypt / Remote $\cdot$ \href{tel:+201151034858}{(+20) 1151034858} $\cdot$ \href{mailto:me@bnsaed.com}{me@bnsaed.com} \\
-        \href{https://www.linkedin.com/in/binsaed/}{LinkedIn} $\cdot$ \href{https://github.com/binSaed}{GitHub} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{StackOverflow} $\cdot$ \href{https://pub.dev/publishers/bnsaed.com/packages}{pub.dev}
+        \small \href{https://www.linkedin.com/in/binsaed/}{linkedin.com/in/binsaed} $\cdot$ \href{https://github.com/binSaed}{github.com/binSaed} $\cdot$ \href{https://stackoverflow.com/users/11001850/abdelrahman-saed}{stackoverflow.com/users/11001850} $\cdot$ \href{https://pub.dev/publishers/bnsaed.com/packages}{pub.dev/publishers/bnsaed.com}
     \end{center}
 
     \vspace{-6pt}
@@ -91,7 +85,7 @@
 
 
     \section{Summary}\label{sec:summary}
-    Senior / Lead Mobile Engineer with \textbf{7 years} shipping production iOS and Android apps to \textbf{5M+ users} --- Flutter, Dart, BLoC / Cubit, Clean Architecture. Lead a 4-engineer squad at \href{https://istoria.app/en/}{iStoria} (EdTech $\cdot$ English language learning), owning architecture, release governance, and delivery for a \textbf{50+ module} codebase. Shipped \textbf{350+ production releases}, reviewed \textbf{900+ PRs}, sustained a \textbf{99.9\% crash-free rate}, and cut the release cycle from \textbf{4 weeks to 1}.
+    Senior Mobile Engineer with \textbf{7 years} shipping production iOS and Android apps to \textbf{5M+ users} --- Flutter, Dart, BLoC / Cubit, Clean Architecture. Lead a 4-engineer squad at \href{https://istoria.app/en/}{iStoria} (EdTech $\cdot$ English language learning), owning architecture, release governance, and delivery for a \textbf{50+ module} codebase. Shipped \textbf{350+ production releases}, reviewed \textbf{900+ PRs}, sustained a \textbf{99.9\% crash-free rate}, and cut the release cycle from \textbf{4 weeks to 1}.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS (inline, standard ATS keywords)
@@ -128,20 +122,18 @@
     {\href{https://istoria.app/en/}{iStoria} (EdTech $\cdot$ English Language Learning) $\cdot$ Riyadh, Saudi Arabia (Hybrid)}
     {Flutter, Dart, BLoC, Cubit, PowerSync, Drift, Codemagic, Firebase, Sentry, Adjust, REST, GraphQL}
     {
-        \item Shipped flagship growth and AI features end-to-end: \textbf{Leaderboard} with social sharing, \textbf{AI Read-with} (Google speech recognition for guided reading), and \textbf{iStro AI chat companion} guiding users through chapter journeys.
-    \item Delivered \textbf{native Home Screen Widgets} on iOS (WidgetKit) and Android (App Widgets) for streak/daily-goal with FCM-driven updates, plus an \textbf{app-wide deep-link router} for auth, passwordless reset, marketing/coupon flows, challenges, and group invites.
-    \item Built the engagement and retention loop powering daily active usage: \textbf{Streak} system with day-off freeze and lost-streak restore, \textbf{Badges}, \textbf{Daily Goal} tracker, social \textbf{Challenges}, and a \textbf{Referral / Invite-Friends} program.
-    \item Achieved \textbf{99.9\% crash-free rate} via crash budgets, systematic profiling, and CI quality gates blocking releases below stability thresholds.
+        \item Maintained end-to-end stability across \textbf{mobile, backend, and cloud} as \textbf{the sole engineer for 1.5M users} during a team transition, while keeping release stability above thresholds.
     \item Designed offline-first infrastructure (PowerSync + Drift) with selective per-key sync, conflict resolution, schema migration, and data integrity guarantees for millions of active accounts.
     \item Drove a sustained performance program: \textbf{{\raise.17ex\hbox{$\scriptstyle\sim$}}35\% cold-start reduction} (parallelized service providers, deferred post-first-frame SDKs, 35+ eager $\to$ lazy dependencies); \textbf{{\raise.17ex\hbox{$\scriptstyle\sim$}}60\% rendering gains} (RepaintBoundary isolation, background JSON deserialization); \textbf{{\raise.17ex\hbox{$\scriptstyle\sim$}}20\% memory reduction} (eliminating controller/stream leaks).
-    \item Architected and implemented an end-to-end cross-platform anti-piracy system integrating mobile tampering, jailbreak, and root detection with backend behavioral analysis to fingerprint compromised builds, automatically blocking \textbf{40,000+ abusive accounts} and reducing credential sharing through enforced 3-device account limits.
-    \item Expanded the supported matrix with app-wide \textbf{Dark Mode} (system-theme aware), \textbf{iPad / tablet / landscape adaptive UI}, and a \textbf{20-language i18n pipeline} (RTL incl. Arabic, Persian, Urdu) with locale-aware push notifications --- all without forking the codebase.
+    \item Achieved \textbf{99.9\% crash-free rate} via crash budgets, systematic profiling, and CI quality gates blocking releases below stability thresholds.
+    \item Architected a cross-platform anti-piracy system --- mobile tampering, jailbreak, and root detection combined with backend behavioral analysis --- automatically blocking \textbf{40,000+ abusive accounts} and cutting credential sharing via enforced 3-device limits.
+    \item Owned the monetization stack: \textbf{RevenueCat} native IAP across iOS/Android, a custom webview checkout \textbf{migrated from Paddle to Stripe}, \textbf{AdMob} ad serving (selected over Appodeal via A/B testing), and a promo / coupon engine driving paid-tier conversion.
+    \item Shipped the product's growth surface end-to-end: AI features (speech-guided reading, AI chat companion), the streaks / badges / challenges retention loop, and a \textbf{20-language i18n pipeline} (RTL incl.\ Arabic) with iPad / tablet adaptive UI and dark mode.
+    \item Delivered \textbf{native Home Screen Widgets} on iOS (WidgetKit) and Android (App Widgets) for streak/daily-goal with FCM-driven updates, plus an \textbf{app-wide deep-link router} for auth, passwordless reset, marketing/coupon flows, challenges, and group invites.
+    \item Integrated 4 marketing SDKs (\href{https://webengage.com/}{WebEngage}, \href{https://www.moengage.com/}{MoEngage}, \href{https://clevertap.com/}{CleverTap}, \href{https://www.adjust.com/}{Adjust}) and built A/B testing infrastructure (Firebase Remote Config + \href{https://www.growthbook.io/}{GrowthBook}), enabling data-driven feature rollouts and personalized engagement.
     \item Migrated mobile asset delivery from \textbf{AWS CloudFront to Cloudflare R2}, coordinating cutover across mobile, backend, and content pipelines with zero user-visible downtime.
-    \item Owned the monetization stack: \href{https://www.revenuecat.com/}{RevenueCat} for native IAP across iOS/Android, a \textbf{custom webview checkout migrated from Paddle to Stripe} for fallback flows, \textbf{AdMob} ad serving (selected over Appodeal via A/B testing) with frequency capping and report-ad UX, and a promo / coupon engine driving paid-tier conversion.
     \item Built internal DevEx tooling: a \textbf{PR-automation bot} (Jira-link injection, conflict labelling, auto-branch-update, stale-branch sweep, quality-team auto-check).
     \item Maintained \textbf{8+ custom/forked Flutter packages}, contributing fixes upstream and owning long-term maintenance to meet production reliability requirements.
-    \item Integrated 4 marketing SDKs (\href{https://webengage.com/}{WebEngage}, \href{https://www.moengage.com/}{MoEngage}, \href{https://clevertap.com/}{CleverTap}, \href{https://www.adjust.com/}{Adjust}) and built A/B testing infrastructure (Firebase Remote Config + \href{https://www.growthbook.io/}{GrowthBook}), enabling data-driven feature rollouts and personalized engagement.
-    \item Maintained end-to-end stability across \textbf{mobile, backend, and cloud} as \textbf{the sole engineer for 1.5M users} during a team transition, while keeping release stability above thresholds.
     }
 
     \workexp{Mobile Engineer}{Oct 2020 -- Jan 2022 \textbullet\ 1 yr 4 mos}
@@ -177,7 +169,7 @@
 
     \section{Projects}\label{sec:projects}
     \begin{itemize}[itemsep=3pt,parsep=0pt,topsep=2pt,leftmargin=1.5em]
-    \item \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{flutter\_cached\_pdfview}} --- Cross-platform Flutter PDF viewer (iOS/Android) with URL/asset/local caching, password-protected PDFs, and gesture-based zoom; \textbf{\href{https://github.com/binSaed/flutter_cached_pdfview}{134\textsuperscript{$\star$} on GitHub}}, \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{501 likes / 55.4k+ downloads on pub.dev}}.
+    \item \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{flutter\_cached\_pdfview}} --- Cross-platform Flutter PDF viewer (iOS/Android) with URL/asset/local caching, password-protected PDFs, and gesture-based zoom; \textbf{\href{https://github.com/binSaed/flutter_cached_pdfview}{134\textsuperscript{$\star$} on GitHub}}, \textbf{\href{https://pub.dev/packages/flutter_cached_pdfview}{501 likes / 57k+ downloads on pub.dev}}.
     \item \textbf{\href{https://pub.dev/packages/flutter_zoom_checker}{flutter\_zoom\_checker}} --- iOS/Android display-zoom (UI scaling) detection plugin, working around a Flutter framework limitation (\href{https://github.com/flutter/flutter/issues/95421}{issue \#95421}).
     \item \textbf{\href{https://github.com/binSaed/dio_firebase_performance_plus}{dio\_firebase\_performance\_plus}} --- Dio interceptor streaming HTTP request metrics to Firebase Performance Monitoring.
     \item \textbf{\href{https://pub.dev/packages/clipboard_plus}{clipboard\_plus}} --- Flutter clipboard plugin with \textbf{silent content-type detection on iOS} (UIPasteboard) --- detects URLs, text, and images without triggering the iOS paste permission dialog.
